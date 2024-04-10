@@ -11,13 +11,15 @@ reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
-
+// if (str === "") return "";
 
 function reverse(str) {
-  // Your code here 
+  if (str === "") return "";
+
+  return reverse(str.substr(1)) + str[0];
 }
 
-
+console.log(reverse("house")); // "esuoh"
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
